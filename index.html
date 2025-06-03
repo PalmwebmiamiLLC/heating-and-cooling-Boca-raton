@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sam's A/C Florida - Premium HVAC Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+    :root {
+      --primary-color: #0068b3;
+      --secondary-color: #00a0e3;
+      --accent-color: #ffc107;
+      --dark-color: #212529;
+      --light-color: #f8f9fa;
+      --white-color: #ffffff;
+      --gray-color: #6c757d;
+      --success-color: #28a745;
+      --glass-bg: rgba(255, 255, 255, 0.1);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --neuro-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.5);
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-color);
+      overflow-x: hidden;
+    }
+
+    /* Utility Classes */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    .btn-accent {
+      background-color: var(--accent-color);
+    }
+
+    .btn-accent:hover {
+      background-color: #e0a800;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: var(--primary-color);
+      position: relative;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--gray-color);
+      margin-bottom: 50px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Glassmorphism Card */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      transition: var(--transition);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Neumorphic Elements */
+    .neuro-element {
+      background-color: var(--light-color);
+      border-radius: 15px;
+      box-shadow: var(--neuro-shadow);
+      padding: 25px;
+      transition: var(--transition);
+    }
+
+    .neuro-element:hover {
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05), -5px -5px 10px rgba(255, 255, 255, 0.6);
+    }
+
+    /* Header Styles */
+    .header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-item {
+      margin-left: 30px;
+    }
+
+    .nav-link {
+      color: var(--dark-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--primary-color);
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: var(--primary-color);
+    }
+
+    .nav-link.active:after {
+      width: 100%;
+    }
+
+    .nav-link.call-us {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      padding: 8px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-link.call-us:hover {
+      background-color: var(--secondary-color);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .hamburger {
+      width: 30px;
+      height: 3px;
+      background-color: var(--dark-color);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .hamburger:before,
+    .hamburger:after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: var(--dark-color);
+      transition: var(--transition);
+    }
+
+    .hamburger:before {
+      top: -8px;
+    }
+
+    .hamburger:after {
+      bottom: -8px;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+    }
+
+    .hero:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      color: var(--white-color);
+      padding: 40px;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    /* About Section */
+    .about-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-image {
+      flex: 1;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--neuro-shadow);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-title {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .about-text {
+      margin-bottom: 30px;
+    }
+
+    /* Services Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      overflow: hidden;
+    }
+
+    .service-image {
+      height: 200px;
+      overflow: hidden;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.1);
+    }
+
+    .service-content {
+      padding: 20px;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .service-description {
+      margin-bottom: 20px;
+    }
+
+    /* Why Choose Us Section */
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .why-choose-item {
+      text-align: center;
+    }
+
+    .why-choose-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background-color: var(--light-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--primary-color);
+      box-shadow: var(--neuro-shadow);
+    }
+
+    .why-choose-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    /* Testimonials Section */
+    .testimonials-slider {
+      position: relative;
+      overflow: hidden;
+      padding: 30px 0;
+    }
+
+    .testimonial-item {
+      padding: 40px;
+      text-align: center;
+      border-radius: 15px;
+      margin: 0 auto;
+      max-width: 800px;
+      display: none;
+    }
+
+    .testimonial-item.active {
+      display: block;
+    }
+
+    .testimonial-text {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .testimonial-text:before,
+    .testimonial-text:after {
+      content: '"';
+      font-size: 3rem;
+      color: var(--primary-color);
+      opacity: 0.3;
+      position: absolute;
+    }
+
+    .testimonial-text:before {
+      top: -20px;
+      left: -10px;
+    }
+
+    .testimonial-text:after {
+      bottom: -40px;
+      right: -10px;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    .testimonial-role {
+      color: var(--gray-color);
+      font-size: 0.9rem;
+    }
+
+    .slider-nav {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .slider-btn {
+      background-color: var(--white-color);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 10px;
+      box-shadow: var(--neuro-shadow);
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+
+    .slider-btn:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    /* Service Estimator */
+    .estimator {
+      background-color: var(--light-color);
+    }
+
+    .estimator-form {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-col {
+      flex: 1;
+    }
+
+    .estimate-result {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: var(--white-color);
+      box-shadow: var(--neuro-shadow);
+      text-align: center;
+      display: none;
+    }
+
+    .estimate-result.active {
+      display: block;
+    }
+
+    .estimate-price {
+      font-size: 2rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    /* Before After Section */
+    .before-after-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    .before-after-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--neuro-shadow);
+    }
+
+    .before-image,
+    .after-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .after-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    }
+
+    .comparison-slider {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 4px;
+      background-color: var(--white-color);
+      cursor: ew-resize;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    .comparison-slider:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background-color: var(--white-color);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .comparison-label {
+      position: absolute;
+      top: 20px;
+      color: var(--white-color);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+    }
+
+    .before-label {
+      left: 20px;
+    }
+
+    .after-label {
+      right: 20px;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--neuro-shadow);
+    }
+
+    .faq-question {
+      padding: 20px;
+      background-color: var(--light-color);
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    .faq-item.active .faq-question:after {
+      content: '-';
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: var(--white-color);
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 20px;
+      max-height: 500px;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+
+    .newsletter-form {
+      display: flex;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .newsletter-btn {
+      background-color: var(--accent-color);
+      color: var(--dark-color);
+      padding: 0 30px;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .newsletter-btn:hover {
+      background-color: #e0a800;
+    }
+
+    /* Contact Form */
+    .contact-form-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+
+    .contact-info {
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--neuro-shadow);
+    }
+
+    .contact-info-item {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      margin-right: 15px;
+      min-width: 30px;
+      color: var(--primary-color);
+    }
+
+    .contact-text h4 {
+      margin-bottom: 5px;
+      color: var(--primary-color);
+    }
+
+    .contact-form {
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: var(--neuro-shadow);
+    }
+
+    .contact-form .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 150px;
+    }
+
+    /* Blog Section */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .blog-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--neuro-shadow);
+      transition: var(--transition);
+    }
+
+    .blog-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .blog-image {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .blog-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .blog-card:hover .blog-image img {
+      transform: scale(1.1);
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-date {
+      color: var(--gray-color);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .blog-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+
+    .blog-excerpt {
+      margin-bottom: 20px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--dark-color);
+      color: var(--light-color);
+      padding: 80px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-column h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: var(--primary-color);
+      bottom: 0;
+      left: 0;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-link {
+      margin-bottom: 10px;
+    }
+
+    .footer-link a {
+      color: var(--light-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-link a:hover {
+      color: var(--primary-color);
+      padding-left: 5px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-icon:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-5px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      
+      .about-wrapper {
+        flex-direction: column;
+      }
+      
+      .why-choose-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .contact-form-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-list {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--white-color);
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0;
+        transition: var(--transition);
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-list.active {
+        left: 0;
+      }
+      
+      .nav-item {
+        margin: 15px 0;
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .hamburger {
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .mobile-menu-btn.active .hamburger {
+        background-color: transparent;
+      }
+      
+      .mobile-menu-btn.active .hamburger:before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      
+      .mobile-menu-btn.active .hamburger:after {
+        transform: rotate(-45deg) translate(5px, -8px);
+      }
+      
+      .hero-content {
+        padding: 20px;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .service-card {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+      
+      .why-choose-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+      }
+      
+      .newsletter-input {
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      
+      .newsletter-btn {
+        border-radius: 5px;
+        width: 100%;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .section {
+        padding: 60px 0;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .form-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .estimator .neuro-element {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="#" class="logo">Sam's A/C</a>
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="tel:5551234567" class="nav-link call-us">Call Us</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+          <div class="hamburger"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gf45a4f4e45870576d565af46b7d87385331c4138e063d4419ff32f82aaa06b578e002d28d4a916f91ef0147b273773414a59a3ac8fbafb0c4361cbae23451370_1280.jpg');">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">We won't settle for less than the best for you!</h1>
+        <p class="hero-description">With over 20 years experience in HVAC services, we take pride in our work and customer service is our number one priority at Sam's AC FL.</p>
+        <a href="#contact" class="btn">Get A Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-image">
+          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g805b060283d85fc97ae813e80ab41bca387a1ba10adbd4cf5b588c195afb2a13ee2b880286686234183b0496b6a6e662ac909604d8b0cecff5b249a942ea60ea_1280.jpg" alt="About Sam's A/C Florida">
+        </div>
+        <div class="about-content">
+          <h2 class="about-title">About Sam's A/C Florida</h2>
+          <p class="about-text">We care about our customers and show it in the service we provide. We strive to do whatever it takes to earn your business and build a relationship built on trust backed by superior service.</p>
+          <p class="about-text">The company you can trust to not leave your home or business too cold nor too hot. From West Palm Beach to Homestead, Florida, we provide 24/7 emergency services for all your air conditioning needs.</p>
+          <a href="#services" class="btn">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section" style="background-color: var(--light-color);">
+    <div class="container">
+      <h2 class="section-title text-center">Our Services</h2>
+      <p class="section-subtitle text-center">Comprehensive HVAC solutions for your home and business</p>
+      
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card glass-card">
+          <div class="service-image">
+            <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gcb457dec66e4d3b560e10f76c3a1f79405b8cce248844de290a37c279df5a912f18b5de996841bd78b71ec094fff4233bd685d42531a34fec5bef2db47e61045_1280.jpg" alt="AC Installation">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">AC Installation</h3>
+            <p class="service-description">Professional installation of new air conditioning systems with expert guidance on selecting the best unit for your space.</p>
+            <a href="#contact" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card glass-card">
+          <div class="service-image">
+            <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g426e5b09a762552f0360b1a05526b5eaeb721ddce8f17559342ef7368982d1c7b4aad6edb4e4aa3f55f27a2ffb35d2a9b5a479c44aa61229fa594183575a7d49_1280.jpg" alt="AC Repair">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">AC Repair</h3>
+            <p class="service-description">Fast and reliable repair services for all types of air conditioning systems, available 24/7 for emergency situations.</p>
+            <a href="#contact" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card glass-card">
+          <div class="service-image">
+            <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g299c3f48549a396abdc576a134c13570436c3c21014b7923844c7c8116105e07e84856ccf5773ce1346655e07e525bdf66e0e9d36f51dcee583b699125d8384d_1280.jpg" alt="AC Maintenance">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">AC Maintenance</h3>
+            <p class="service-description">Regular maintenance services to keep your AC system running efficiently, prolonging its lifespan and preventing costly breakdowns.</p>
+            <a href="#contact" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Why Choose Us</h2>
+      <p class="section-subtitle text-center">What sets us apart from other HVAC service providers</p>
+      
+      <div class="why-choose-grid">
+        <!-- Item 1 -->
+        <div class="why-choose-item neuro-element">
+          <div class="why-choose-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3 class="why-choose-title">20+ Years Experience</h3>
+          <p>Over two decades of expertise in providing top-quality HVAC services throughout Florida.</p>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="why-choose-item neuro-element">
+          <div class="why-choose-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="why-choose-title">Expert Technicians</h3>
+          <p>Our team consists of certified professionals with extensive training and experience.</p>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="why-choose-item neuro-element">
+          <div class="why-choose-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="why-choose-title">24/7 Emergency Service</h3>
+          <p>We're available around the clock to handle any emergency HVAC issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section" style="background-color: var(--light-color);">
+    <div class="container">
+      <h2 class="section-title text-center">What Our Clients Say</h2>
+      <p class="section-subtitle text-center">Read testimonials from our satisfied customers</p>
+      
+      <div class="testimonials-slider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-item glass-card active">
+          <p class="testimonial-text">Sam's A/C Florida saved me during the hottest week of the year when my AC unit suddenly stopped working. Their team arrived within hours and fixed the issue efficiently. Excellent service!</p>
+          <div class="testimonial-author">Jennifer T.</div>
+          <div class="testimonial-role">Homeowner in Boca Raton</div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-item glass-card">
+          <p class="testimonial-text">I've been using Sam's A/C for maintenance of my restaurant's cooling system for over 5 years. Their professionalism and reliability are unmatched. Highly recommended for any business owner!</p>
+          <div class="testimonial-author">Michael R.</div>
+          <div class="testimonial-role">Restaurant Owner</div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-item glass-card">
+          <p class="testimonial-text">The installation team was knowledgeable, courteous, and left my home cleaner than when they arrived. My new AC system works perfectly, and the price was very competitive. Thank you!</p>
+          <div class="testimonial-author">Sandra L.</div>
+          <div class="testimonial-role">Homeowner in West Palm Beach</div>
+        </div>
+        
+        <!-- Slider Navigation -->
+        <div class="slider-nav">
+          <button class="slider-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
+          <button class="slider-btn next-btn"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Estimator Section -->
+  <section id="estimator" class="section estimator">
+    <div class="container">
+      <h2 class="section-title text-center">Service Price Estimator</h2>
+      <p class="section-subtitle text-center">Get an instant estimate for your HVAC service needs</p>
+      
+      <form class="estimator-form neuro-element">
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-group">
+              <label for="service-type" class="form-label">Service Type</label>
+              <select id="service-type" class="form-select" required>
+                <option value="">Select a service</option>
+                <option value="installation">New AC Installation</option>
+                <option value="repair">AC Repair</option>
+                <option value="maintenance">Regular Maintenance</option>
+                <option value="cleaning">Duct Cleaning</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-group">
+              <label for="square-feet" class="form-label">Square Footage</label>
+              <input type="number" id="square-feet" class="form-input" placeholder="Home/Office size in sq ft" required min="100">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="ac-units" class="form-label">Number of AC Units</label>
+          <input type="number" id="ac-units" class="form-input" placeholder="How many units?" required min="1" max="10">
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" class="btn">Calculate Estimate</button>
+        </div>
+        
+        <div class="estimate-result">
+          <h3>Your Estimated Price</h3>
+          <div class="estimate-price">$0.00</div>
+          <p>This is an estimate only. Contact us for a detailed quote.</p>
+          <a href="#contact" class="btn btn-outline">Request Detailed Quote</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Before-After Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Before & After</h2>
+      <p class="section-subtitle text-center">See the transformations from our installation and repair work</p>
+      
+      <div class="before-after-container">
+        <!-- Before-After Item 1 -->
+        <div class="before-after-item">
+          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g01b98a3e9996ce99215c8921d1902b5230db2f9197a7f1672de5f39608e2fe9d64e4f0b0af20e0c3eecbcf17d7c66586568c4071a20d163d9150fffe85697d65_1280.jpg" alt="Before" class="before-image">
+          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g299c3f48549a396abdc576a134c13570436c3c21014b7923844c7c8116105e07e84856ccf5773ce1346655e07e525bdf66e0e9d36f51dcee583b699125d8384d_1280.jpg" alt="After" class="after-image">
+          <div class="comparison-slider"></div>
+          <div class="comparison-label before-label">Before</div>
+          <div class="comparison-label after-label">After</div>
+        </div>
+        
+        <!-- Before-After Item 2 -->
+        <div class="before-after-item">
+          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g778cac8e2efa7af8329abed20cdbf4938e319ec5d668665144e97a4a1d86e32bbf68c4c77b5d55667be6032e6d45df6b6cd4b1934adae5d3a0bc353d35140caf_1280.jpg" alt="Before" class="before-image">
+          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g025476fb44aca5be22ccb559848b3261f3961c102bf95279f33a23cafca792b698be26aca7ba7252cc6f67baea36f47cf63c8c538cc53261355adf6cee88b5ca_1280.png" alt="After" class="after-image">
+          <div class="comparison-slider"></div>
+          <div class="comparison-label before-label">Before</div>
+          <div class="comparison-label after-label">After</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background-color: var(--light-color);">
+    <div class="container">
+      <h2 class="section-title text-center">Frequently Asked Questions</h2>
+      <p class="section-subtitle text-center">Find answers to common questions about our services</p>
+      
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item active">
+          <div class="faq-question">How often should I service my AC unit?</div>
+          <div class="faq-answer">
+            <p>We recommend servicing your AC unit at least twice a year - once before the cooling season begins and once before the heating season starts. Regular maintenance ensures optimal performance, extends the lifespan of your system, and can prevent costly repairs.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">What size AC unit do I need for my home?</div>
+          <div class="faq-answer">
+            <p>The size of the AC unit needed depends on several factors including your home's square footage, ceiling height, insulation quality, number of windows, and local climate. As a general rule, you need about 20 BTUs per square foot. Our technicians can perform a proper load calculation to determine the exact size required for your space.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">How long does an AC installation take?</div>
+          <div class="faq-answer">
+            <p>A typical AC installation takes about 4-8 hours for a residential system, depending on the complexity of the installation and whether ductwork modifications are needed. Commercial installations may take longer. We always strive to complete installations efficiently while ensuring quality work.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">Do you offer financing options?</div>
+          <div class="faq-answer">
+            <p>Yes, we offer flexible financing options to help make your HVAC investment more affordable. We work with several financial institutions to provide competitive rates and payment plans tailored to your budget. Contact us for more details about our current financing options.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">What areas do you service in Florida?</div>
+          <div class="faq-answer">
+            <p>We service from West Palm Beach to Homestead, Florida. Our service area includes Boca Raton, Fort Lauderdale, Miami, and all surrounding communities. We also offer 24/7 emergency services throughout our service area.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section newsletter">
+    <div class="container">
+      <h2 class="section-title text-center" style="color: var(--white-color);">Subscribe to Our Newsletter</h2>
+      <p class="section-subtitle text-center" style="color: var(--light-color);">Get seasonal maintenance tips and exclusive offers</p>
+      
+      <form class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+        <button type="submit" class="newsletter-btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Contact Us</h2>
+      <p class="section-subtitle text-center">We're here to help with all your HVAC needs</p>
+      
+      <div class="contact-form-container">
+        <div class="contact-info">
+          <h3 style="margin-bottom: 20px;">Get In Touch</h3>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Address</h4>
+              <p>1740 Costa Del Sol, Boca Raton, FL 33432</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p>(555) 123-4567</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p>info@samsacfl.com</p>
+            </div>
+          </div>
+          
+          <div class="contact-info-item">
+            <div class="contact-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Hours of Operation</h4>
+              <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+              <p>Saturday: 9:00 AM - 12:00 PM</p>
+              <p>Sunday: Closed</p>
+              <p><strong>24/7 Emergency Service Available</strong></p>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Your name" required>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="Your email" required>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" id="phone" class="form-input" placeholder="Your phone number" required>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="service" class="form-label">Service Needed</label>
+            <select id="service" class="form-select" required>
+              <option value="">Select a service</option>
+              <option value="installation">New AC Installation</option>
+              <option value="repair">AC Repair</option>
+              <option value="maintenance">Maintenance</option>
+              <option value="inspection">System Inspection</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-textarea" placeholder="How can we help you?" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="btn">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="section" style="background-color: var(--light-color);">
+    <div class="container">
+      <h2 class="section-title text-center">Latest Blog Posts</h2>
+      <p class="section-subtitle text-center">Helpful tips and insights about HVAC systems</p>
+      
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gb7638c4867160131e273091b445258cca9f529bc54afcbf3bd0512ef3c30058d3515022d0d84b5185bf79c05f478be2eb86ca5254028a7c1eb26606e051bc5c9_640.png" alt="HVAC Energy Efficiency">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">June 1, 2025</div>
+            <h3 class="blog-title">5 Ways to Improve Your AC's Energy Efficiency</h3>
+            <p class="blog-excerpt">Learn how to reduce your energy bills while keeping your home cool during hot Florida summers.</p>
+            <a href="#" class="btn btn-outline">Read More</a>
+          </div>
+        </div>
+        
+        <!-- Blog Post 2 -->
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gef3e7e2761369da18bc7d9386c3ecbdad96c0d226c3b817bfe679a52922c87c46989aa2da3f79891de304cd2451915b743e8eeb828587cb58c101b3bb29f12aa_640.jpg" alt="AC Maintenance Tips">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">May 15, 2025</div>
+            <h3 class="blog-title">DIY AC Maintenance Tips for Homeowners</h3>
+            <p class="blog-excerpt">Simple maintenance tasks you can perform yourself to keep your AC running smoothly between professional services.</p>
+            <a href="#" class="btn btn-outline">Read More</a>
+          </div>
+        </div>
+        
+        <!-- Blog Post 3 -->
+        <div class="blog-card">
+          <div class="blog-image">
+            <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g1918e26e6641954bfad9bc1712abed989244376a8c4874d7234dbe202c53fa30e6e646f8f6096b43019131de8f7fb929af224b94c5de4936ee1bf689ab3e7d26_1280.jpg" alt="Smart Thermostats">
+          </div>
+          <div class="blog-content">
+            <div class="blog-date">April 28, 2025</div>
+            <h3 class="blog-title">The Benefits of Smart Thermostats</h3>
+            <p class="blog-excerpt">Discover how smart thermostats can transform your home comfort and save you money on energy costs.</p>
+            <a href="#" class="btn btn-outline">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1 -->
+        <div class="footer-column">
+          <h3>Sam's A/C Florida</h3>
+          <p>We provide premium HVAC services throughout South Florida, from West Palm Beach to Homestead. With over 20 years of experience, we're the trusted choice for all your air conditioning needs.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">Home</a></li>
+            <li class="footer-link"><a href="#about">About Us</a></li>
+            <li class="footer-link"><a href="#services">Services</a></li>
+            <li class="footer-link"><a href="#testimonials">Testimonials</a></li>
+            <li class="footer-link"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div class="footer-column">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><a href="#">AC Installation</a></li>
+            <li class="footer-link"><a href="#">AC Repair</a></li>
+            <li class="footer-link"><a href="#">AC Maintenance</a></li>
+            <li class="footer-link"><a href="#">Duct Cleaning</a></li>
+            <li class="footer-link"><a href="#">Commercial HVAC</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li class="footer-link"><i class="fas fa-map-marker-alt"></i> 1740 Costa Del Sol, Boca Raton, FL 33432</li>
+            <li class="footer-link"><i class="fas fa-phone"></i> (555) 123-4567</li>
+            <li class="footer-link"><i class="fas fa-envelope"></i> info@samsacfl.com</li>
+            <li class="footer-link"><i class="fas fa-clock"></i> Mon-Fri: 8AM-5PM, Sat: 9AM-12PM</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sam's A/C Florida. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const navList = document.querySelector('.nav-list');
+      
+      if (mobileMenuBtn) {
+          mobileMenuBtn.addEventListener('click', function() {
+              navList.classList.toggle('active');
+              this.classList.toggle('active');
+          });
+          
+          // Close mobile menu when clicking on a link
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+              link.addEventListener('click', function() {
+                  navList.classList.remove('active');
+                  mobileMenuBtn.classList.remove('active');
+              });
+          });
+      }
+
+      // Sticky Header
+      const header = document.querySelector('.header');
+      
+      window.addEventListener('scroll', function() {
+          if (window.scrollY > 100) {
+              header.classList.add('sticky');
+          } else {
+              header.classList.remove('sticky');
+          }
+      });
+
+      // Testimonials Slider
+      const testimonialItems = document.querySelectorAll('.testimonial-item');
+      const prevBtn = document.querySelector('.prev-btn');
+      const nextBtn = document.querySelector('.next-btn');
+      let currentTestimonial = 0;
+
+      function showTestimonial(index) {
+          testimonialItems.forEach(item => item.classList.remove('active'));
+          testimonialItems[index].classList.add('active');
+      }
+
+      if (prevBtn && nextBtn && testimonialItems.length > 0) {
+          nextBtn.addEventListener('click', function() {
+              currentTestimonial = (currentTestimonial + 1) % testimonialItems.length;
+              showTestimonial(currentTestimonial);
+          });
+
+          prevBtn.addEventListener('click', function() {
+              currentTestimonial = (currentTestimonial - 1 + testimonialItems.length) % testimonialItems.length;
+              showTestimonial(currentTestimonial);
+          });
+      }
+
+      // Before After Image Comparison
+      const comparisonSliders = document.querySelectorAll('.comparison-slider');
+      
+      comparisonSliders.forEach(slider => {
+          let isActive = false;
+          
+          function handleMove(e) {
+              if (!isActive) return;
+              
+              const sliderRect = slider.parentElement.getBoundingClientRect();
+              const position = (e.clientX - sliderRect.left) / sliderRect.width * 100;
+              
+              if (position >= 0 && position <= 100) {
+                  slider.style.left = `${position}%`;
+                  slider.previousElementSibling.style.clipPath = `polygon(0 0, ${position}% 0, ${position}% 100%, 0% 100%)`;
+              }
+          }
+          
+          slider.addEventListener('mousedown', () => {
+              isActive = true;
+          });
+          
+          window.addEventListener('mouseup', () => {
+              isActive = false;
+          });
+          
+          window.addEventListener('mousemove', handleMove);
+          
+          // Touch events for mobile
+          slider.addEventListener('touchstart', () => {
+              isActive = true;
+          });
+          
+          window.addEventListener('touchend', () => {
+              isActive = false;
+          });
+          
+          window.addEventListener('touchmove', (e) => {
+              if (!isActive) return;
+              
+              const touch = e.touches[0];
+              const sliderRect = slider.parentElement.getBoundingClientRect();
+              const position = (touch.clientX - sliderRect.left) / sliderRect.width * 100;
+              
+              if (position >= 0 && position <= 100) {
+                  slider.style.left = `${position}%`;
+                  slider.previousElementSibling.style.clipPath = `polygon(0 0, ${position}% 0, ${position}% 100%, 0% 100%)`;
+              }
+          });
+      });
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+          const question = item.querySelector('.faq-question');
+          
+          question.addEventListener('click', () => {
+              const isActive = item.classList.contains('active');
+              
+              // Close all FAQs
+              faqItems.forEach(faqItem => {
+                  faqItem.classList.remove('active');
+              });
+              
+              // Open clicked FAQ if it was closed
+              if (!isActive) {
+                  item.classList.add('active');
+              }
+          });
+      });
+
+      // Service Price Estimator
+      const estimatorForm = document.querySelector('.estimator-form');
+      const estimateResult = document.querySelector('.estimate-result');
+      const estimatePrice = document.querySelector('.estimate-price');
+      
+      if (estimatorForm) {
+          estimatorForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // Get form values
+              const serviceType = document.getElementById('service-type').value;
+              const sqFt = parseInt(document.getElementById('square-feet').value);
+              const acUnits = parseInt(document.getElementById('ac-units').value);
+              
+              // Calculate estimated price
+              let basePrice = 0;
+              
+              switch (serviceType) {
+                  case 'installation':
+                      basePrice = 2500 + (sqFt * 0.75);
+                      break;
+                  case 'repair':
+                      basePrice = 150 + (acUnits * 50);
+                      break;
+                  case 'maintenance':
+                      basePrice = 100 + (acUnits * 25);
+                      break;
+                  case 'cleaning':
+                      basePrice = 75 + (acUnits * 35);
+                      break;
+              }
+              
+              // Display result
+              estimatePrice.textContent = `$${basePrice.toFixed(2)}`;
+              estimateResult.classList.add('active');
+              
+              // Scroll to result
+              estimateResult.scrollIntoView({ behavior: 'smooth' });
+          });
+      }
+
+      // Newsletter Form
+      const newsletterForm = document.querySelector('.newsletter-form');
+      
+      if (newsletterForm) {
+          newsletterForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              const emailInput = this.querySelector('input[type="email"]');
+              const email = emailInput.value;
+              
+              if (email) {
+                  // In a real application, you would send this to your server
+                  alert('Thank you for subscribing to our newsletter!');
+                  emailInput.value = '';
+              }
+          });
+      }
+
+      // Contact Form
+      const contactForm = document.querySelector('.contact-form');
+      
+      if (contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              
+              // In a real application, you would send this to your server
+              alert('Thank you for your message. We will get back to you soon!');
+              this.reset();
+          });
+      }
+    });
+  </script>
+</body>
+</html>
