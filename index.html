@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sam's A/C Florida - Premium HVAC Services</title>
+  <title>Heating and Cooling Boca Raton - Premium HVAC Services</title>
+  <meta name="description" content="Heating and Cooling Boca Raton - Premium HVAC Services with over 20 years experience. We take pride in our work and customer service is our number one priority.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
@@ -155,11 +156,21 @@
     }
 
     .logo {
-      font-size: 1.8rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; /* Adjusted for very long name "Heating and Cooling Boca Raton" */
       font-weight: 700;
       color: var(--primary-color);
       text-decoration: none;
+      line-height: 1.2; 
     }
+     .logo span {
+        display: block; 
+        font-size: 0.8em; 
+        color: var(--secondary-color); 
+        font-weight: 500; 
+        letter-spacing: 0.02em; /* Adjusted letter spacing */
+    }
+
 
     .nav-list {
       display: flex;
@@ -915,7 +926,7 @@
     @media (max-width: 768px) {
       .nav-list {
         position: fixed;
-        top: 70px;
+        top: 70px; /* Height of header */
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
@@ -924,7 +935,7 @@
         align-items: center;
         padding: 50px 0;
         transition: var(--transition);
-        z-index: 999;
+        z-index: 999; /* Ensure it's below the header but above content */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
       
@@ -1018,10 +1029,9 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header class="header">
     <div class="container header-container">
-      <a href="#" class="logo">Sam's A/C</a>
+      <a href="https://comfortmastershvacrepair.com/" class="logo">Comfort Masters<span>HVAC Repair</span></a>
       <nav>
         <ul class="nav-list">
           <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
@@ -1038,26 +1048,24 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero" style="background-image: url('https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gf45a4f4e45870576d565af46b7d87385331c4138e063d4419ff32f82aaa06b578e002d28d4a916f91ef0147b273773414a59a3ac8fbafb0c4361cbae23451370_1280.jpg');">
     <div class="container">
       <div class="hero-content">
         <h1 class="hero-title">We won't settle for less than the best for you!</h1>
-        <p class="hero-description">With over 20 years experience in HVAC services, we take pride in our work and customer service is our number one priority at Sam's AC FL.</p>
+        <p class="hero-description">With over 20 years experience in HVAC services, we take pride in our work and customer service is our number one priority at Comfort Masters HVAC Repair.</p>
         <a href="#contact" class="btn">Get A Free Quote</a>
       </div>
     </div>
   </section>
 
-  <!-- About Us Section -->
   <section id="about" class="section">
     <div class="container">
       <div class="about-wrapper">
         <div class="about-image">
-          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g805b060283d85fc97ae813e80ab41bca387a1ba10adbd4cf5b588c195afb2a13ee2b880286686234183b0496b6a6e662ac909604d8b0cecff5b249a942ea60ea_1280.jpg" alt="About Sam's A/C Florida">
+          <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g805b060283d85fc97ae813e80ab41bca387a1ba10adbd4cf5b588c195afb2a13ee2b880286686234183b0496b6a6e662ac909604d8b0cecff5b249a942ea60ea_1280.jpg" alt="About Comfort Masters HVAC Repair">
         </div>
         <div class="about-content">
-          <h2 class="about-title">About Sam's A/C Florida</h2>
+          <h2 class="about-title">About Comfort Masters HVAC Repair</h2>
           <p class="about-text">We care about our customers and show it in the service we provide. We strive to do whatever it takes to earn your business and build a relationship built on trust backed by superior service.</p>
           <p class="about-text">The company you can trust to not leave your home or business too cold nor too hot. From West Palm Beach to Homestead, Florida, we provide 24/7 emergency services for all your air conditioning needs.</p>
           <a href="#services" class="btn">Our Services</a>
@@ -1066,14 +1074,12 @@
     </div>
   </section>
 
-  <!-- Services Section -->
   <section id="services" class="section" style="background-color: var(--light-color);">
     <div class="container">
       <h2 class="section-title text-center">Our Services</h2>
       <p class="section-subtitle text-center">Comprehensive HVAC solutions for your home and business</p>
       
       <div class="services-grid">
-        <!-- Service 1 -->
         <div class="service-card glass-card">
           <div class="service-image">
             <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gcb457dec66e4d3b560e10f76c3a1f79405b8cce248844de290a37c279df5a912f18b5de996841bd78b71ec094fff4233bd685d42531a34fec5bef2db47e61045_1280.jpg" alt="AC Installation">
@@ -1085,7 +1091,6 @@
           </div>
         </div>
         
-        <!-- Service 2 -->
         <div class="service-card glass-card">
           <div class="service-image">
             <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g426e5b09a762552f0360b1a05526b5eaeb721ddce8f17559342ef7368982d1c7b4aad6edb4e4aa3f55f27a2ffb35d2a9b5a479c44aa61229fa594183575a7d49_1280.jpg" alt="AC Repair">
@@ -1097,7 +1102,6 @@
           </div>
         </div>
         
-        <!-- Service 3 -->
         <div class="service-card glass-card">
           <div class="service-image">
             <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g299c3f48549a396abdc576a134c13570436c3c21014b7923844c7c8116105e07e84856ccf5773ce1346655e07e525bdf66e0e9d36f51dcee583b699125d8384d_1280.jpg" alt="AC Maintenance">
@@ -1112,14 +1116,12 @@
     </div>
   </section>
 
-  <!-- Why Choose Us Section -->
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">Why Choose Us</h2>
       <p class="section-subtitle text-center">What sets us apart from other HVAC service providers</p>
       
       <div class="why-choose-grid">
-        <!-- Item 1 -->
         <div class="why-choose-item neuro-element">
           <div class="why-choose-icon">
             <i class="fas fa-check-circle"></i>
@@ -1128,7 +1130,6 @@
           <p>Over two decades of expertise in providing top-quality HVAC services throughout Florida.</p>
         </div>
         
-        <!-- Item 2 -->
         <div class="why-choose-item neuro-element">
           <div class="why-choose-icon">
             <i class="fas fa-tools"></i>
@@ -1137,7 +1138,6 @@
           <p>Our team consists of certified professionals with extensive training and experience.</p>
         </div>
         
-        <!-- Item 3 -->
         <div class="why-choose-item neuro-element">
           <div class="why-choose-icon">
             <i class="fas fa-clock"></i>
@@ -1149,35 +1149,30 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
   <section id="testimonials" class="section" style="background-color: var(--light-color);">
     <div class="container">
       <h2 class="section-title text-center">What Our Clients Say</h2>
       <p class="section-subtitle text-center">Read testimonials from our satisfied customers</p>
       
       <div class="testimonials-slider">
-        <!-- Testimonial 1 -->
         <div class="testimonial-item glass-card active">
-          <p class="testimonial-text">Sam's A/C Florida saved me during the hottest week of the year when my AC unit suddenly stopped working. Their team arrived within hours and fixed the issue efficiently. Excellent service!</p>
+          <p class="testimonial-text">Comfort Masters HVAC Repair saved me during the hottest week of the year when my AC unit suddenly stopped working. Their team arrived within hours and fixed the issue efficiently. Excellent service!</p>
           <div class="testimonial-author">Jennifer T.</div>
           <div class="testimonial-role">Homeowner in Boca Raton</div>
         </div>
         
-        <!-- Testimonial 2 -->
         <div class="testimonial-item glass-card">
-          <p class="testimonial-text">I've been using Sam's A/C for maintenance of my restaurant's cooling system for over 5 years. Their professionalism and reliability are unmatched. Highly recommended for any business owner!</p>
+          <p class="testimonial-text">I've been using Comfort Masters HVAC Repair for maintenance of my restaurant's cooling system for over 5 years. Their professionalism and reliability are unmatched. Highly recommended for any business owner!</p>
           <div class="testimonial-author">Michael R.</div>
           <div class="testimonial-role">Restaurant Owner</div>
         </div>
         
-        <!-- Testimonial 3 -->
         <div class="testimonial-item glass-card">
-          <p class="testimonial-text">The installation team was knowledgeable, courteous, and left my home cleaner than when they arrived. My new AC system works perfectly, and the price was very competitive. Thank you!</p>
+          <p class="testimonial-text">The installation team was knowledgeable, courteous, and left my home cleaner than when they arrived. My new AC system works perfectly, and the price was very competitive. Thank you, Comfort Masters HVAC Repair!</p>
           <div class="testimonial-author">Sandra L.</div>
           <div class="testimonial-role">Homeowner in West Palm Beach</div>
         </div>
         
-        <!-- Slider Navigation -->
         <div class="slider-nav">
           <button class="slider-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
           <button class="slider-btn next-btn"><i class="fas fa-arrow-right"></i></button>
@@ -1186,7 +1181,6 @@
     </div>
   </section>
 
-  <!-- Service Estimator Section -->
   <section id="estimator" class="section estimator">
     <div class="container">
       <h2 class="section-title text-center">Service Price Estimator</h2>
@@ -1233,14 +1227,12 @@
     </div>
   </section>
 
-  <!-- Before-After Section -->
   <section class="section">
     <div class="container">
       <h2 class="section-title text-center">Before & After</h2>
       <p class="section-subtitle text-center">See the transformations from our installation and repair work</p>
       
       <div class="before-after-container">
-        <!-- Before-After Item 1 -->
         <div class="before-after-item">
           <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g01b98a3e9996ce99215c8921d1902b5230db2f9197a7f1672de5f39608e2fe9d64e4f0b0af20e0c3eecbcf17d7c66586568c4071a20d163d9150fffe85697d65_1280.jpg" alt="Before" class="before-image">
           <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g299c3f48549a396abdc576a134c13570436c3c21014b7923844c7c8116105e07e84856ccf5773ce1346655e07e525bdf66e0e9d36f51dcee583b699125d8384d_1280.jpg" alt="After" class="after-image">
@@ -1249,7 +1241,6 @@
           <div class="comparison-label after-label">After</div>
         </div>
         
-        <!-- Before-After Item 2 -->
         <div class="before-after-item">
           <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g778cac8e2efa7af8329abed20cdbf4938e319ec5d668665144e97a4a1d86e32bbf68c4c77b5d55667be6032e6d45df6b6cd4b1934adae5d3a0bc353d35140caf_1280.jpg" alt="Before" class="before-image">
           <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g025476fb44aca5be22ccb559848b3261f3961c102bf95279f33a23cafca792b698be26aca7ba7252cc6f67baea36f47cf63c8c538cc53261355adf6cee88b5ca_1280.png" alt="After" class="after-image">
@@ -1261,14 +1252,12 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
   <section class="section" style="background-color: var(--light-color);">
     <div class="container">
       <h2 class="section-title text-center">Frequently Asked Questions</h2>
       <p class="section-subtitle text-center">Find answers to common questions about our services</p>
       
       <div class="faq-container">
-        <!-- FAQ Item 1 -->
         <div class="faq-item active">
           <div class="faq-question">How often should I service my AC unit?</div>
           <div class="faq-answer">
@@ -1276,7 +1265,6 @@
           </div>
         </div>
         
-        <!-- FAQ Item 2 -->
         <div class="faq-item">
           <div class="faq-question">What size AC unit do I need for my home?</div>
           <div class="faq-answer">
@@ -1284,7 +1272,6 @@
           </div>
         </div>
         
-        <!-- FAQ Item 3 -->
         <div class="faq-item">
           <div class="faq-question">How long does an AC installation take?</div>
           <div class="faq-answer">
@@ -1292,7 +1279,6 @@
           </div>
         </div>
         
-        <!-- FAQ Item 4 -->
         <div class="faq-item">
           <div class="faq-question">Do you offer financing options?</div>
           <div class="faq-answer">
@@ -1300,7 +1286,6 @@
           </div>
         </div>
         
-        <!-- FAQ Item 5 -->
         <div class="faq-item">
           <div class="faq-question">What areas do you service in Florida?</div>
           <div class="faq-answer">
@@ -1311,7 +1296,6 @@
     </div>
   </section>
 
-  <!-- Newsletter Section -->
   <section class="section newsletter">
     <div class="container">
       <h2 class="section-title text-center" style="color: var(--white-color);">Subscribe to Our Newsletter</h2>
@@ -1324,7 +1308,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title text-center">Contact Us</h2>
@@ -1360,7 +1343,7 @@
             </div>
             <div class="contact-text">
               <h4>Email</h4>
-              <p>info@samsacfl.com</p>
+              <p>info@comfortmastershvacrepair.com</p>
             </div>
           </div>
           
@@ -1424,14 +1407,12 @@
     </div>
   </section>
 
-  <!-- Blog Section -->
   <section class="section" style="background-color: var(--light-color);">
     <div class="container">
       <h2 class="section-title text-center">Latest Blog Posts</h2>
       <p class="section-subtitle text-center">Helpful tips and insights about HVAC systems</p>
       
       <div class="blog-grid">
-        <!-- Blog Post 1 -->
         <div class="blog-card">
           <div class="blog-image">
             <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gb7638c4867160131e273091b445258cca9f529bc54afcbf3bd0512ef3c30058d3515022d0d84b5185bf79c05f478be2eb86ca5254028a7c1eb26606e051bc5c9_640.png" alt="HVAC Energy Efficiency">
@@ -1444,7 +1425,6 @@
           </div>
         </div>
         
-        <!-- Blog Post 2 -->
         <div class="blog-card">
           <div class="blog-image">
             <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/gef3e7e2761369da18bc7d9386c3ecbdad96c0d226c3b817bfe679a52922c87c46989aa2da3f79891de304cd2451915b743e8eeb828587cb58c101b3bb29f12aa_640.jpg" alt="AC Maintenance Tips">
@@ -1457,7 +1437,6 @@
           </div>
         </div>
         
-        <!-- Blog Post 3 -->
         <div class="blog-card">
           <div class="blog-image">
             <img src="https://public.youware.com/users-website-assets/prod/b16de44d-8c99-4627-84c1-b7c3b735f837/g1918e26e6641954bfad9bc1712abed989244376a8c4874d7234dbe202c53fa30e6e646f8f6096b43019131de8f7fb929af224b94c5de4936ee1bf689ab3e7d26_1280.jpg" alt="Smart Thermostats">
@@ -1473,13 +1452,11 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- Column 1 -->
         <div class="footer-column">
-          <h3>Sam's A/C Florida</h3>
+          <h3>Comfort Masters HVAC Repair</h3>
           <p>We provide premium HVAC services throughout South Florida, from West Palm Beach to Homestead. With over 20 years of experience, we're the trusted choice for all your air conditioning needs.</p>
           <div class="social-icons">
             <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -1489,7 +1466,6 @@
           </div>
         </div>
         
-        <!-- Column 2 -->
         <div class="footer-column">
           <h3>Quick Links</h3>
           <ul class="footer-links">
@@ -1501,7 +1477,6 @@
           </ul>
         </div>
         
-        <!-- Column 3 -->
         <div class="footer-column">
           <h3>Services</h3>
           <ul class="footer-links">
@@ -1513,20 +1488,19 @@
           </ul>
         </div>
         
-        <!-- Column 4 -->
         <div class="footer-column">
           <h3>Contact Info</h3>
           <ul class="footer-links">
             <li class="footer-link"><i class="fas fa-map-marker-alt"></i> 1740 Costa Del Sol, Boca Raton, FL 33432</li>
             <li class="footer-link"><i class="fas fa-phone"></i> (555) 123-4567</li>
-            <li class="footer-link"><i class="fas fa-envelope"></i> info@samsacfl.com</li>
+            <li class="footer-link"><i class="fas fa-envelope"></i> info@comfortmastershvacrepair.com</li>
             <li class="footer-link"><i class="fas fa-clock"></i> Mon-Fri: 8AM-5PM, Sat: 9AM-12PM</li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Sam's A/C Florida. All Rights Reserved.</p>
+        <p>&copy; 2025 Comfort Masters HVAC Repair. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -1647,7 +1621,7 @@
           question.addEventListener('click', () => {
               const isActive = item.classList.contains('active');
               
-              // Close all FAQs
+              // Close all other items
               faqItems.forEach(faqItem => {
                   faqItem.classList.remove('active');
               });
